@@ -1,0 +1,207 @@
+/* 🔹 Reinicio general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Fondo y tipografía */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 300% 300%;
+    animation: fondoAnimado 10s ease infinite;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 🔹 Efecto de animación del fondo */
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🔹 Contenedor del formulario */
+fieldset {
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 🔹 Fondo difuminado si el navegador lo soporta */
+@supports (backdrop-filter: blur(15px)) or (-webkit-backdrop-filter: blur(15px)) {
+    fieldset {
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+}
+
+/* 🔹 Título (legend) con color degradado llamativo */
+legend {
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ff00cc, #00ffea, #ffae00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* 🔹 Estructura del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 🔹 Etiquetas */
+label {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* 🔹 Campos de texto, número, teléfono y select */
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* 🔹 Estilo mejorado del select */
+.select-container {
+    position: relative;
+    width: 100%;
+}
+
+.select-container::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #ffae00;
+    pointer-events: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.select-container:hover::after {
+    color: #00ffea;
+}
+
+/* 🔹 Botones */
+input[type="submit"], 
+button {
+    background: linear-gradient(90deg, #ff00cc, #ffae00);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+}
+
+input[type="submit"]:hover, 
+button:hover {
+    background: linear-gradient(90deg, #00ffea, #ffae00);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Enlaces */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* 🔹 Opciones del select */
+select option {
+    padding: 12px;
+    background: white;
+    color: #333;
+}
+
+select option[value=""] {
+    color: #888;
+    font-style: italic;
+}
+
+/* 🔹 Mensaje de información */
+.info-message {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 480px) {
+    fieldset {
+        padding: 30px 20px;
+    }
+    
+    legend {
+        font-size: 1.5em;
+    }
+}
+

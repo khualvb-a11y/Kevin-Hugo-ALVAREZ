@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Insertar Alumno</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<fieldset>
+  <legend>Insertar Alumno</legend>
+  <form method="post" action="php/crud_insertar.php">
+    <label>id_alumno</label>
+    <input type="number" name="id_alumno" required>
+
+    <label>nombre</label>
+    <input type="text" name="nombre" required>
+    <br><br>
+    <label>apellido</label>
+    <input type="text" name="apellido" required>
+    <br><br>
+    <label>fecha_na</label>
+    <input type="date" name="fecha_na" required>
+<br><br>
+<label>direccion</label>
+    <input type="text" name="direccion" required>
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" pattern="\d{10}" maxlength="10" required placeholder="Ej. 1234567890">
+    <br><br>
+<label>email</label>
+    <input type="text" name="email" required>
+    <label>sexo</label>
+    <input type="text" name="sexo" required>
+
+    <input type="submit" name="enviar" value="Guardar">
+    <a href="index.html">🏠 Regresar</a>
+  </form>
+</fieldset>
+</body>
+</html>
+
+

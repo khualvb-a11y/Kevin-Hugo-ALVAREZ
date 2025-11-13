@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Insertar Docente</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<fieldset>
+  <legend>Insertar  Docente</legend>
+  <form method="post" action="php/crud_insertardoc.php">
+    <label>id_docente</label>
+    <input type="number" name="id_docente" required>
+
+    <label>nombre_docente</label>
+    <input type="text" name="nombre" required>
+    <br><br>
+    <label>apellido_docente</label>
+    <input type="text" name="apellido" required>
+    <br><br>
+    <label>especialidad</label>
+    <input type="text" name="especialidad" required>
+    <br><br>
+    <label>email</label>
+    <input type="text" name="email" required>
+<br><br>
+<label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+<label>fecha_contratacion</label>
+    <input type="date" name="f_c" required>
+
+    <input type="submit" name="enviar" value="Guardar">
+    <a href="index.html">🏠 Regresar</a>
+  </form>
+</fieldset>
+</body>
+</html>

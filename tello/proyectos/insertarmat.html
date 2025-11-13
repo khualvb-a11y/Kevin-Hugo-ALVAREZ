@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Insertar Materia</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<fieldset>
+  <legend>Insertar Materia</legend>
+  <form method="post" action="php/crud_insertarmat.php">
+    <label>id_materia</label>
+    <input type="number" name="id_materia" required>
+
+    <label>nombre_materia</label>
+    <input type="text" name="nombre" required>
+    <br><br>
+    <label>descripcion</label>
+    <input type="text" name="descripcion" required>
+    <br><br>
+    <label>creditos</label>
+    <input type="number" name="creditos" required>
+<br><br>
+<label>horas_semana</label>
+    <input type="number" name="h_sem" required>
+    
+
+    <input type="submit" name="enviar" value="Guardar">
+    <a href="index.html">🏠 Regresar</a>
+  </form>
+</fieldset>
+</body>
+</html>

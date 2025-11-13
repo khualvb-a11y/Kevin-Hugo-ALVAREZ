@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Insertar cal</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<fieldset>
+  <legend>Insertar cal</legend>
+  <form method="post" action="crud_cal.php">
+    
+    <label>id_calificacion</label>
+    <input type="number" name="id_cal" required>
+
+    <label>fecha_captura</label>
+    <input type="date" name="fecha_captura" required>
+
+    <label>id_docente</label>
+    <input type="number" name="id_docente" required>
+
+    <label>id_materia</label>
+    <input type="number" name="id_materia" required>
+
+    <label>id_alumno</label>
+    <input type="number" name="id_alumno" required>
+
+    <label>calificacion</label>
+    <input type="number" name="calificacion" required>
+
+    <input type="submit" name="enviar" value="Guardar">
+    <a href="index.html">🏠 Regresar</a>
+  </form>
+</fieldset>
+</body>
+</html>
